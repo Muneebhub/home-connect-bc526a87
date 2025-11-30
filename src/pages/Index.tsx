@@ -1,10 +1,30 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Search, Home, TrendingUp, Shield } from 'lucide-react';
+import { Search, Home, TrendingUp, Shield, Plus } from 'lucide-react';
 import Header from '@/components/Header';
 import heroImage from '@/assets/hero-property.jpg';
+import { useAuth } from '@/contexts/AuthContext';
+import { useToast } from '@/hooks/use-toast';
 
 export default function Index() {
+  const { user, userRole } = useAuth();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleListProperty = () => {
+    if (!user) {
+      navigate('/auth');
+    } else if (userRole === 'seller') {
+      navigate('/create-property');
+    } else {
+      toast({
+        title: "Seller Account Required",
+        description: "Please create a seller account to list properties.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -28,16 +48,19 @@ export default function Index() {
           </p>
           <div className="flex gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
             <Link to="/properties">
-              <Button size="lg" className="text-lg px-8">
+              <Button size="lg" className="text-lg px-8 shadow-lg hover:shadow-xl transition-all">
                 <Search className="mr-2 h-5 w-5" />
                 Browse Properties
               </Button>
             </Link>
-            <Link to="/auth">
-              <Button size="lg" variant="secondary" className="text-lg px-8">
-                List Your Property
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              onClick={handleListProperty}
+              className="text-lg px-8 bg-gradient-to-r from-secondary via-secondary to-accent hover:opacity-90 shadow-lg hover:shadow-xl transition-all hover:scale-105"
+            >
+              <Plus className="mr-2 h-5 w-5" />
+              List Your Property
+            </Button>
           </div>
         </div>
       </section>
