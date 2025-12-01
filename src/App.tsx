@@ -11,6 +11,7 @@ import PropertyDetail from "./pages/PropertyDetail";
 import SellerDashboard from "./pages/SellerDashboard";
 import BuyerDashboard from "./pages/BuyerDashboard";
 import CreateProperty from "./pages/CreateProperty";
+import EditProperty from "./pages/EditProperty";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/seller-dashboard" element={<SellerDashboard />} />
             <Route path="/buyer-dashboard" element={<BuyerDashboard />} />
             <Route path="/create-property" element={<CreateProperty />} />
+            <Route path="/edit-property/:id" element={<EditProperty />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
