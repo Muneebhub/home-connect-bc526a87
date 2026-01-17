@@ -18,7 +18,7 @@ export default function Header() {
         <Link to="/" className="flex items-center gap-2 font-bold text-xl">
           <Home className="h-6 w-6 text-primary" />
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            PropertyHub
+            TUMHARAGHAR
           </span>
         </Link>
 
