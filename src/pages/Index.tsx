@@ -69,7 +69,7 @@ export default function Index() {
       <section className="py-20 bg-muted/30">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Why Choose PropertyHub?
+            Why Choose TUMHARAGHAR?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6 rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
@@ -110,7 +110,7 @@ export default function Index() {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Join thousands of buyers and sellers on PropertyHub today
+            Join thousands of buyers and sellers on TUMHARAGHAR today
           </p>
           <Link to="/auth">
             <Button size="lg" className="text-lg px-8">
@@ -123,7 +123,7 @@ export default function Index() {
       {/* Footer */}
       <footer className="bg-muted py-8 border-t">
         <div className="container text-center text-muted-foreground">
-          <p>&copy; 2024 PropertyHub. All rights reserved.</p>
+          <p>&copy; 2024 TUMHARAGHAR. All rights reserved.</p>
         </div>
       </footer>
     </div>
