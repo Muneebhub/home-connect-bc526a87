@@ -123,52 +123,65 @@ export default function Index() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Search,
-                title: 'Smart Search',
-                description: 'Find your perfect property with our advanced AI-powered search filters and recommendations.',
-                color: 'primary',
-                delay: '0s'
-              },
-              {
-                icon: Home,
-                title: 'Verified Listings',
-                description: 'Every property is personally verified by our team to ensure authenticity and quality.',
-                color: 'secondary',
-                delay: '0.1s'
-              },
-              {
-                icon: Shield,
-                title: 'Secure Transactions',
-                description: 'Your data and transactions are protected with enterprise-grade security protocols.',
-                color: 'accent',
-                delay: '0.2s'
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="group relative p-8 rounded-3xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
-                style={{ animationDelay: feature.delay }}
-              >
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-${feature.color}/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700`} />
-                
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-${feature.color} to-${feature.color}/70 flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="h-8 w-8 text-white" />
-                </div>
-                
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
-                
-                <div className="mt-6 flex items-center text-primary font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </div>
+            {/* Smart Search */}
+            <div className="group relative p-8 rounded-3xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Search className="h-8 w-8 text-white" />
               </div>
-            ))}
+              
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                Smart Search
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Find your perfect property with our advanced AI-powered search filters and recommendations.
+              </p>
+              
+              <div className="mt-6 flex items-center text-primary font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </div>
+
+            {/* Verified Listings */}
+            <div className="group relative p-8 rounded-3xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-secondary/70 flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Home className="h-8 w-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                Verified Listings
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Every property is personally verified by our team to ensure authenticity and quality.
+              </p>
+              
+              <div className="mt-6 flex items-center text-primary font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </div>
+
+            {/* Secure Transactions */}
+            <div className="group relative p-8 rounded-3xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                Secure Transactions
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Your data and transactions are protected with enterprise-grade security protocols.
+              </p>
+              
+              <div className="mt-6 flex items-center text-primary font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
