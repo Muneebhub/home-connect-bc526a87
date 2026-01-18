@@ -196,8 +196,10 @@ export default function Index() {
                 </Button>
               </Link>
               <Link to="/properties">
-                <Button size="lg" variant="outline" className="text-lg px-10 py-7 border-2 border-white text-white hover:bg-white/10 transition-all duration-300 font-semibold rounded-2xl">
+                <Button size="lg" className="text-lg px-10 py-7 bg-gradient-to-r from-primary to-accent text-white shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 font-semibold rounded-2xl">
+                  <Search className="mr-2 h-5 w-5" />
                   Explore Properties
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>
